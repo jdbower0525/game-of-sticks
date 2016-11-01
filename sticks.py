@@ -8,6 +8,7 @@ class UserInteraction:
 
 class GamePlay:
     def __init__(self, stick_count=0, players=0, turn_count = 0):
+        print("The player to pick up the last stick is the loser")
         self.players = UserInteraction.game_start(self)
         self.stick_count = UserInteraction.stick_start(self)
         print(self.players)
@@ -16,9 +17,12 @@ class GamePlay:
     def display(self, stick_count, players, turn_count):
         turn_count = 2
         player = 'Player 1'
-        print("The player to pick up the last stick is the loser")
         print("There are {} sticks remaining. ".format(self.stick_count))
         print("It is {}'s turn. ".format(self.players))
+
+    def turn(self, stick_count, players, turn_count):
+        GamePlay.display
+
 
 def main():
     game1 = GamePlay()
